@@ -1,0 +1,35 @@
+body{
+	width: 900px;
+	font-family: Dancing script;
+}
+
+header{
+	background: #5b7989;
+	display: flex;
+	flex-flow: row wrap;
+	border-radius: 10px 10px 0px 0px;
+	color: white;
+	text-shadow: 0 0 2px #02010a;
+}
+
+header ul{
+	list-style-type: none;
+	margin: 5%;
+	padding: 0;
+	display: flex;
+}
+
+header ul li{
+	display: block;
+	float: right;
+	margin: 5%;
+}
+
+header ul li a{
+	color: white;
+	font-size: 20px;
+}
+
+@media screen (min-width=900){
+	
+}

@@ -1,6 +1,7 @@
 body{
 	width: 900px;
 	font-family: Dancing script;
+	background-color: #02010A;
 }
 
 header{
@@ -10,11 +11,23 @@ header{
 	border-radius: 10px 10px 0px 0px;
 	color: white;
 	text-shadow: 0 0 2px #02010a;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+header h1{
+	margin: 0 auto;
+	font-size: 22px;
+	text-align: center;
+}
+
+header navbar{
+	margin: 0 auto;
 }
 
 header ul{
 	list-style-type: none;
-	margin: 5%;
 	padding: 0;
 	display: flex;
 }
@@ -27,7 +40,7 @@ header ul li{
 
 header ul li a{
 	color: white;
-	font-size: 20px;
+	font-size: 22px;
 	text-decoration: none;
 }
 
@@ -45,6 +58,7 @@ header ul li a{
 	background-color: #82C3A6;
 	height: 80%;
 	width: 90%;
+	-webkit-box-shadow: 2px 2px 2px 2px #02010A;
 }
 
 .secundaria{
@@ -59,36 +73,100 @@ header ul li a{
 	width: 48%;
 	height: 350px;
 	margin: 4px;
+	-webkit-box-shadow: 2px 2px 2px 2px #02010A;
+}
+
+#casino{
+	-webkit-transform: rotate(0deg);
+	transition: rotate 3s;
 }
 
 #casino:hover{
 	box-shadow: #82C3A6;
 	border: 2px;
+	-webkit-transform: rotate(10deg);
+}
+
+#saxoplayer:hover{
+	-webkit-transform: translate(20px,-5px);
+	background-color: #82c3a6;
+	border: 2px;
 }
 
 footer{
 	border-radius: 0 0 10px 10px;
+	background-color: #C6D5C5;
 	display: flex;
 	flex-flow: row wrap;
+	justify-content: space-between;
 	width: 100%;
 	margin: 0 auto;
 	font-size: 18px;
 }
 
-footer #columna1, #columna2, #columna3, #columna4{
-	width: 25%;
-	height: 50px;
-	float: left;
+footer [id^="columna"]{
+	width: 22%;
+	margin: 2px 2px 4px 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+article h2{
+	margin: 5px 0px; 
 	text-align: center;
+}
+
+#columna1{
+	margin-left: 4px;
+}
+
+#contacto{
+	width: 100%;
+	margin: 2px 0px;
+}
+
+#contacto p{
+	margin: 0 auto;
+	padding: 2px;
+	font-size: 15px;
+	text-align: center;
+}
+
+#columna2 p{
+	margin: 2px 0px;
+	width:50%;
+	font-size: 16px;
+}
+
+#socialMedia{
+	display: flex;
+	flex-direction: inline;
+	justify-content: flex-start;
+}
+
+#socialMedia a{
+	float: left;
+	width: 33%;
+}
+
+#autor{
+	float: left;
+	margin-left: -10%;
+	margin: 0px -10%;
+}
+
+#autor p{
+	margin: 0px;
+	font-size: 13px;
 }
 
 @media screen and (max-width: 900px){
 	#contenedor{
 		width: 100%;
 	}
-}
-
-@media screen and (max-width: 480px){
+	
 	#principal img{
 		width: 100%;
 	}
@@ -96,5 +174,15 @@ footer #columna1, #columna2, #columna3, #columna4{
 	.secundaria img{
 		width: 100%;
 		height: 400px;
+	}
+	
+	footer{
+		flex-direction: column;
+		flex: 1 100%;
+		margin-left: 0px;
+	}
+	
+	#socialMedia a{
+		flex: 1 30%;
 	}
 }
